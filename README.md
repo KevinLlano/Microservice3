@@ -1,4 +1,53 @@
-# **Microservice3**
+# **Microservice3** ![Java](https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png)
+
+
+
+### Setup & Installation
+
+1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/yourusername/inventory-booking-service.git  
+   cd inventory-booking-service
+   ```
+
+2. **Start Docker Services**  
+   ```bash
+   docker-compose up -d
+   ```
+
+3. **Configure Application Properties**  
+   - Update `src/main/resources/application.properties` with MySQL and Kafka settings.
+
+4. **Run the Services**  
+   Navigate to each service directory and run:  
+   ```bash
+   mvn spring-boot:run
+   ```  
+   Run in this order:  
+   - `inventoryservice`  
+   - `bookingservice`  
+   - `orderservice`  
+   - `apigateway`
+
+5. **Test APIs**  
+   - **Inventory Service**:  
+     - `http://localhost:8080/api/v1/inventory/venue/1`  
+     - `http://localhost:8080/api/v1/inventory/events`  
+   - **Booking Service**:  
+     - `http://localhost:8081/api/v1/booking`  
+     - Example POST data:  
+       ```json
+       {
+         "userId": 1,
+         "eventId": 1,
+         "ticketCount": 50
+       }
+       ```
+
+6. **Stop Services**  
+   ```bash
+   docker-compose down
+   ```
 
 ### **INVENTORY SERVICE**
 
