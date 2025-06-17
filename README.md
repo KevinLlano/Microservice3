@@ -1,6 +1,62 @@
 # **Microservice3** ![Java](https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png)
 
+## 📖 Overview
 
+**Microservice3** is a ticketing system built with a microservices architecture using Spring Boot. It includes four core services: Inventory, Booking, Order, and an API Gateway. Each service communicates through REST APIs and Kafka for event-driven operations. Keycloak handles authentication, and all components are containerized using Docker and orchestrated with Docker Compose.
+
+- **Inventory Service** – Manages venue and event capacities.
+- **Booking Service** – Handles booking requests and ticket validation.
+- **Order Service** – Listens to booking events and creates orders.
+- **API Gateway** – Routes client requests and enforces security via Keycloak.
+
+All services are containerized with Docker and use **Apache Kafka** for asynchronous communication. **Keycloak** provides OAuth2-based authentication. **MySQL** is used for data persistence, with **Flyway** handling schema migrations.
+
+---
+
+## 🛠 Tools & Technologies Used
+
+### Languages & Frameworks
+- Java 21
+- Spring Boot (Web, Data JPA, Security)
+- Lombok
+
+### Architecture & Communication
+- Microservices
+- REST APIs
+- Apache Kafka (event-driven architecture)
+
+### Database & Migrations
+- MySQL
+- Flyway
+
+### Authentication & Security
+- Keycloak (OAuth2 Resource Server)
+
+### Containerization & Orchestration
+- Docker
+- Docker Compose
+
+### DevOps & CI/CD
+- Maven
+- Git
+- Jenkins (optional)
+
+### Tools
+- Postman (API testing)
+- Kafka UI
+- IntelliJ IDEA
+
+---
+
+## 🚀 Features
+
+- ✅ Event & Venue Inventory Management  
+- ✅ Real-time Booking Validation  
+- ✅ Kafka-Powered Order Processing  
+- ✅ API Gateway Routing with OAuth2 Security  
+- ✅ Dockerized Environment with Isolated Services  
+
+---
 
 ### Setup & Installation
 
